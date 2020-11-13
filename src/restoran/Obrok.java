@@ -5,15 +5,11 @@
  */
 package restoran;
 
-import lombok.Builder;
-import lombok.ToString;
 
 /**
  * @author fluxmeister
  *
  */
-@Builder
-@ToString
 public  class Obrok {
 	
 	protected  String naziv;
