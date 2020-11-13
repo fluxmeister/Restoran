@@ -20,9 +20,14 @@ public class Restoran {
 		 * without any incosistent state of arguments management issues
 		 */
 		
-		Obrok obrok = new Obrok.ObrokBuilder("NekiNaziv", 30.5).build();
+		Obrok obrok1 = new Obrok.ObrokBuilder("Pljeskavica", 300).build();
 		
-		System.out.println(obrok);
+		System.out.println(obrok1);
+		
+		
+		Obrok obrok2 = new Obrok.ObrokBuilder("Gurmanska pljeska", 500).build();
+		
+		System.out.println(obrok2);
 	}
 
 }

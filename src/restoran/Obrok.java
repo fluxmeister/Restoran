@@ -16,8 +16,8 @@ public  class Obrok {
 	 * The only way to get an Obrok object is through the ObrokBuilder class.
 	 */
 	
-	private  String naziv;
-	private  double cena;
+	private final String naziv;
+	private final double cena;
 	
 	private Obrok(ObrokBuilder builder) {
 		this.naziv = builder.naziv;
@@ -32,13 +32,27 @@ public  class Obrok {
 		return cena;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Obrok: " + this.naziv + ", cena: " + this.cena + "; ";
+	}
+
+
+
 	//Builder (inner static) Class
 	//should have a public constructor with all the required attributes as parameters.
 	public static class ObrokBuilder{
 
 		// required attributes
-		private  String naziv;
-		private  double cena;
+		private final String naziv;
+		private final double cena;
+		
+		public ObrokBuilder (String naziv, double cena) {
+			this.naziv = naziv;
+			this.cena = cena;
+		}
 		
 		// there is no optional attributes in this example
 		/*Builder class should have methods 
@@ -46,17 +60,15 @@ public  class Obrok {
 		 * it should return the same Builder object after setting the optional attributes.
 		 */
 		
-		public ObrokBuilder (String naziv, double cena) {
-			this.naziv = naziv;
-			this.cena = cena;
-		}
+		
 		
 		/* The final step is to provide a build() method in the builder class 
 		 * that will return the Object needed by client program. 
 		 * For this we need to have a private constructor in the Class with Builder class as argument.
 		 */
 		public Obrok build() {
-			return new Obrok(this);
+			Obrok obrok = new Obrok(this);
+			return obrok;
 		}
 		
 	}
