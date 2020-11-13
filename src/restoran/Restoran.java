@@ -16,10 +16,13 @@ public class Restoran {
 	 */
 	public static void main(String[] args) {
 
-		Obrok obrok = Obrok.builder().cena(35).build();
+		/* Using builder to get the object in a single line of code and
+		 * without any incosistent state of arguments management issues
+		 */
 		
-		System.out.println(obrok.toString());
+		Obrok obrok = new Obrok.ObrokBuilder("NekiNaziv", 30.5).build();
 		
+		System.out.println(obrok);
 	}
 
 }

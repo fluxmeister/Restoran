@@ -12,67 +12,57 @@ package restoran;
  */
 public  class Obrok {
 	
-	protected  String naziv;
-	protected  double cena;
-	/**
-	 * @return the naziv
+	/* Obrok class has only getter methods and no public constructor.
+	 * The only way to get an Obrok object is through the ObrokBuilder class.
 	 */
+	
+	private  String naziv;
+	private  double cena;
+	
+	private Obrok(ObrokBuilder builder) {
+		this.naziv = builder.naziv;
+		this.cena = builder.cena;
+	}
+	
 	public String getNaziv() {
 		return naziv;
 	}
-	/**
-	 * @param naziv the naziv to set
-	 */
-	public void setNaziv(String naziv) {
-		this.naziv = naziv;
-	}
-	/**
-	 * @return the cena
-	 */
+	
 	public double getCena() {
 		return cena;
 	}
-	/**
-	 * @param cena the cena to set
-	 */
-	public void setCena(double cena) {
-		this.cena = cena;
+	
+	//Builder (inner static) Class
+	//should have a public constructor with all the required attributes as parameters.
+	public static class ObrokBuilder{
+
+		// required attributes
+		private  String naziv;
+		private  double cena;
+		
+		// there is no optional attributes in this example
+		/*Builder class should have methods 
+		 * to set the optional parameters and 
+		 * it should return the same Builder object after setting the optional attributes.
+		 */
+		
+		public ObrokBuilder (String naziv, double cena) {
+			this.naziv = naziv;
+			this.cena = cena;
+		}
+		
+		/* The final step is to provide a build() method in the builder class 
+		 * that will return the Object needed by client program. 
+		 * For this we need to have a private constructor in the Class with Builder class as argument.
+		 */
+		public Obrok build() {
+			return new Obrok(this);
+		}
+		
 	}
 	
-	public abstract class ObrokBuilder{
-
-		@Override
-		public int hashCode() {
-			// TODO Auto-generated method stub
-			return super.hashCode();
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			// TODO Auto-generated method stub
-			return super.equals(obj);
-		}
-
-		@Override
-		protected Object clone() throws CloneNotSupportedException {
-			// TODO Auto-generated method stub
-			return super.clone();
-		}
-
-		@Override
-		public String toString() {
-			// TODO Auto-generated method stub
-			return super.toString();
-		}
-
-		@Override
-		protected void finalize() throws Throwable {
-			// TODO Auto-generated method stub
-			super.finalize();
-		}
-		
-		
-		
-	}
+	/* Notice that Obrok class has only getter methods and no public constructor.
+	 * So the only way to get an Obrok object is through the ObrokBuilder class.
+	 */
 	
 }

@@ -9,5 +9,5 @@ Let’s see how we can implement builder design pattern in java.
 <li>Java Builder class should have methods to set the optional parameters and it should return the same Builder object after setting the optional attribute.</li>
 <li>The final step is to provide a build() method in the builder class that will return the Object needed by client program. For this we need to have a private constructor in the Class with Builder class as argument.</li>
 </ol>
-Builder pattern eplained in detail <a href="https://www.journaldev.com/1425/builder-design-pattern-in-java" target="_blank">here</a>.
+Builder pattern explained in details <a href="https://www.journaldev.com/1425/builder-design-pattern-in-java" target="_blank">here</a>.
 </html>
