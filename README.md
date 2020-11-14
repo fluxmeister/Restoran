@@ -11,3 +11,6 @@ Let’s see how we can implement builder design pattern in java.
 </ol>
 Builder pattern explained in details <a href="https://www.journaldev.com/1425/builder-design-pattern-in-java" target="_blank">here</a>.
 </html>
+
+
+14.11.2020. - checkpoint FirstObrok;
