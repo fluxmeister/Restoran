@@ -70,6 +70,11 @@ public  class Obrok {
 			Obrok obrok = new Obrok(this);
 			return obrok;
 		}
+		/*
+		 * public Obrok build(){
+		 * 		return new Obrok(this);
+		 * }
+		 */
 		
 	}
 	
