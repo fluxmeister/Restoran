@@ -14,3 +14,4 @@ Builder pattern explained in details <a href="https://www.journaldev.com/1425/bu
 
 
 14.11.2020. - checkpoint FirstObrok;
+16.11.2020. - recreating complete algorithm structure;
