@@ -34,3 +34,5 @@ ii) Gazirani sok 0.3, negazirani sok 0.5, čaša vode
 6) Naplatiti drugu porudžbinu
 7) Pokušati poručivanje Pizza Capricciosa za sto broj 2 (očekuje se uspešno kreiranje
 porudžbine bez izuzetka).
+14.11.2020. - checkpoint FirstObrok;
+16.11.2020. - recreating complete algorithm structure;
