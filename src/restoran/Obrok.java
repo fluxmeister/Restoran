@@ -41,8 +41,8 @@ public  class Obrok {
 
 
 
-	//Builder (inner static) Class
-	//should have a public constructor with all the required attributes as parameters.
+	/* Builder (inner static) Class
+	 * should have a public constructor with all the required attributes as parameters.*/
 	public static class ObrokBuilder{
 
 		// required attributes
